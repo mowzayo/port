@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.header:hover {
+    color: #666264;
+    transform: scale(1.05); /* Slightly enlarge the text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.head:hover {
+    color: #666264;
+    transform: scale(1.05); /* Slightly enlarge the text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+
+  .projects-container, .projects-container1 {
+    margin: 35px;
+    display: flex;
+ 
+   }
+   
+
+   .projects, .projects1 {
+     display: flex;
+     gap: 5px;
+     transition: transform 0.5s ease;
+     width: 50%;
+     height: 600px;
+    
+   }
+   
+   .pro {
+    margin: 35px;
+    font-size: 1.5rem;
+   }
+
+   .butt {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 60px;
+    border-radius: 4px;
+    border: none;
+    font-size: 1.2rem;
+   }
+
+
+   .project {
+     display: flex;
+     gap: 20px;
+     transition: transform 0.5s ease;
+     height: 600px;
+     width: 50%;
+     background-image:  url('../assets/usregionalsales.png');  
+     background-size: contain; 
+     background-position: center; 
+     background-repeat: no-repeat;
+     border: 5px solid brown;
+   }
+
+   .project1 {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    height: 600px;
+    width: 50%;
+    background-image:  url('../assets/splendorins.png');  
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border: 5px solid brown;
+  }
+
+  .project2 {
+    display: flex;
+    gap: 20px;
+    border-color: black;
+    transition: transform 0.5s ease;
+    height: 600px;
+    width: 50%;
+    background-image:  url('../assets/simon.jpg');  
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border: 5px solid brown;
+  }
+   
+   .project img {
+     width:800px;
+     height: auto;
+   }
+   
+   @media (max-width: 1063px) {
+    /* General body styling adjustments */
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    /* Header styling adjustments */
+    .header {
+      font-size: 2.5rem; /* Reduce font size */
+      flex-direction: column; /* Stack items vertically */
+      margin: 25px;
+    }
+  
+    /* Hover effects for header */
+    .header:hover {
+      transform: scale(1); /* Remove scaling effect on smaller screens */
+    }
+  
+    .head:hover {
+      transform: scale(1); /* Remove scaling effect on smaller screens */
+    }
+  
+    /* Projects container layout adjustments */
+.projects-container, .projects-container1 {
+  margin: 15px;
+  display:flex;
+  flex-direction:column; /* Stack projects vertically */
+  gap:5px;
+}
+
+/* Projects layout adjustments */
+.projects, .projects1 {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1px;
+  width: 100%; /* Make projects container full width */
+}
+
+/* Individual project styling adjustments */
+.project, .project1, .project2 {
+  width: 100%; /* Full width for smaller screens */
+  margin-top: 0; /* Remove negative margin for better alignment */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  border: none;
+}
+
+/* Reverse the order of content in .projects-container1 */
+.projects-container1 {
+  flex-direction: column-reverse; /* Reverse the order (text below, image above) */
+}
+
+/* Adjust image margins for better alignment */
+.project img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 0; /* Reset any negative margins */
+}
+
+/* Button styling adjustments */
+.butt {
+  width: 100%; /* Make button full width */
+  font-size: 1rem; /* Adjust font size */
+  padding: 12px; /* Adjust padding */
+  margin-top: 15px; /* Space above the button */
+}
+
+    .pro {
+      font-size: 1.2rem; /* Adjust font size */
+
+    }
+  }
+  

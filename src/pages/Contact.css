@@ -1,0 +1,168 @@
+/* Container styling */
+.contact-container {
+display: flex;
+  font-family: Arial, sans-serif;
+  background-color: rgb(239, 243, 243);
+  background-image:  url('../assets/joshua.jpg');
+ 
+}
+
+.contact-form {
+  display: grid;
+  gap: 15px;
+  max-width: 500px;
+  position: relative; /* Allows overlapping and precise positioning */
+  right: 250px; /* Adjust to control vertical overlap */
+  margin: 45px auto; /* Centers horizontally */
+  padding: 20px;
+  background-color: #858a8d; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  align-items: flex-start;
+  z-index: 10; /* Higher value to ensure it overlaps other elements */
+  overflow: auto; /* Adds scrollbars if content exceeds the form's height */
+}
+
+
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #070707; /* Darker text */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Button styling */
+.submit-btn {
+  padding: 10px 15px;
+  background-color: rgb(2, 2, 2); /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.contact {
+  padding: 20px;
+  background-color: rgb(239, 243, 243);
+  width: 60%;
+  
+}
+
+.contact h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 10px; /* Adds space above the divider */
+  margin: 35px;
+}
+
+.contact-item img:hover{
+  color: black;
+}
+.contact-item img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin-right: 15px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1 {
+  margin: 35px;
+}
+.contact-text strong {
+  font-size: 16px;
+  color: #333; /* Adjust for visibility */
+  margin-bottom: 5px;
+}
+
+.contact-divider {
+  border-top: 1px solid #ccc; /* The bottom line for each contact item */
+  margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 1063px) {
+  .contact-container {
+    flex-direction: column; /* Stacks items vertically */
+    background-size: cover; /* Ensures background image scales well */
+  }
+
+  .contact-form {
+    max-width: 90%; /* Reduces the form width */
+    margin: 20px auto; /* Adjusts margin for centering */
+    right: 0; /* Resets positioning for smaller screens */
+    padding: 15px; /* Smaller padding */
+    box-shadow: none; /* Optional: removes shadow for simplicity */
+  }
+
+  .contact {
+    width: 100%; /* Full width for smaller screens */
+    padding: 15px;
+  }
+
+  .contact-item {
+    margin: 15px; /* Reduces margins */
+    flex-wrap: wrap; /* Allows text to wrap */
+  }
+
+  .contact-item img {
+    width: 30px; /* Smaller image */
+    height: 30px;
+    margin-bottom: 10px; /* Adds spacing when items stack */
+  }
+
+  .contact-text strong {
+    font-size: 14px; /* Adjusts font size */
+  }
+
+  .h1 {
+    font-size: 20px; /* Reduces heading size */
+    margin: 20px;
+  }
+
+  .submit-btn {
+    width: 100%; /* Full-width button */
+    padding: 10px; /* Adjusts padding */
+    font-size: 14px; /* Smaller text */
+  }
+}
+

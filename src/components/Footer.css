@@ -1,0 +1,135 @@
+.footer {
+
+    background-color: black;
+
+    color: white; /* Adjust text color to stand out against the background */
+    padding: 50px; /* Adds padding inside the footer */
+    text-align: left; /* Aligns text to the left */
+    display: flex; /* Enables flexible layout */
+    justify-content: space-between; /* Aligns content to opposite sides */
+    align-items: center; /* Centers items vertically */
+    height: auto; /* Allow height to adjust to content */
+    min-height: 200px;  /* Sets height of the footer */
+   
+}
+
+/* Styling for the unordered list */
+ul {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+/* Ensure .dnhm ul is displayed as a row on the right */
+.dnhm {
+    list-style: none;
+    display: flex; /* Makes the list a row */
+    flex-direction: row; /* Horizontal alignment */
+    gap: 20px; /* Adds spacing between list items */
+    color: white; /* Ensures text color is white */
+    margin-left: auto; /* Pushes the list to the right */
+    
+    position: relative;
+}
+
+.dn--hm1--footer--item {
+ position: relative;
+ font-weight: 700;
+  }
+
+  .submenu {
+     display: none; 
+    list-style: none;
+    position: absolute;
+    top: 110%; /* Position it below the parent */
+    right: 5px;
+    background-color: transparent;
+    padding: 10px 0;
+    border: 1px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 170px;
+    height: 70px;
+  }
+  
+  .submenu-item {
+    padding: 5px 20px;
+  }
+  
+  .submenu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    display: block;
+  }
+  
+  .submenu-link:hover {
+    color: rgb(240, 91, 91); /* Hover effect */
+  }
+  
+  /* Show submenu on hover */
+  .has-submenu:hover .submenu {
+    display: block;
+  }
+
+.dnhm li {
+    display: inline-block; /* Ensures the list items align in a row */
+    text-align: center; /* Centers text inside the list items */
+    color: white;
+}
+
+.dnhm a {
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Add hover effect */
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dnhm a:hover {
+    color: rgb(240, 91, 91); /* Hover effect */
+}
+
+.footimg {
+    position: absolute;
+    width: 100%; /* Make the image responsive to the container's width */
+ bottom: 0;
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; 
+   z-index: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 1024px) {
+    .footer {
+        display: flex;
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center align all elements */
+        text-align: center; /* Center-align text */
+       
+        background-size: contain; 
+    }
+
+    .dnhm {
+        flex-direction: row; /* Stack list items vertically */
+        align-items: center; /* Center-align list items */
+      z-index: 1;
+      margin-top: 20px;
+        
+    }
+
+    .footimg {
+        position: absolute;
+        width: 100%; /* Make the image take up the full width */
+        height: auto; /* Maintain the aspect ratio */ 
+       bottom: 0;
+  min-width: 250px;
+    }
+
+.dn--hm1--footer--item {
+    font-size: 17px;
+        font-weight: 700;
+         }
+       
+    
+}

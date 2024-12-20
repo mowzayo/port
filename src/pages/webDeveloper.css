@@ -1,0 +1,43 @@
+.contain {
+    display: flex;
+    margin: 35px;
+    flex-direction: column;
+   
+}
+
+
+.front {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    flex-direction: column;
+    display: flex;
+}
+
+.titles {
+   font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgg {
+    margin: 50px;
+    max-width: 80%; /* Set maximum width for responsiveness */
+    height: 800px;
+ 
+  }
+
+  .para {
+    font-size: 20px;
+  }
+
+  @media (max-width: 1063px) {
+  .imgg {
+    height: 300px;
+    width: 300px;
+
+  }
+
+}
