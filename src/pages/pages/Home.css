@@ -1,0 +1,167 @@
+@keyframes colorTransition {
+  0% { color: red; }
+  25% { color: orange; }
+  50% { color: white; }
+  75% { color: green; }
+  100% { color: blue; }
+}
+
+
+
+.intro {
+  animation: colorTransition 5s infinite; /* 5s duration, infinite loop */
+  font-size: 60px;
+  line-height: 1;
+}
+.intro2 {
+  animation: colorTransition 5s infinite; /* 5s duration, infinite loop */
+ 
+}
+
+.container {
+   background-color: rgb(18, 18, 18); 
+   color: aliceblue;
+   display: flex;
+   align-items: center; 
+   justify-content: space-between; 
+
+}
+
+.tro {
+  font-size: 25px;
+  margin: 35px;
+  padding-bottom: 130px;
+  max-width: 50%;
+}
+
+.contain .img1 {
+  height: auto;
+  width: 600px;
+  margin-bottom: 100px;
+ 
+}
+
+.butto {
+  margin-top: 10px;
+  background-color: rgb(18, 18, 18); 
+  color: white;
+  width: 300px;
+  height: 60px;
+  border-radius: 2px;
+  border: 1px solid #6f6e6e; 
+  font-size: 2rem;
+  
+ }
+
+.butto:hover{
+  background-color: rgb(18, 18, 18);
+  transform: scale(1.05);
+  color: #666264;
+}
+
+h3 {
+  color: aliceblue;
+}
+.css {
+  display: inline-block;
+  height: 1.2em;  
+  width: auto;  
+  vertical-align: middle;
+  margin-right: 10px;  
+}
+
+
+.skillstext {
+  color: black;
+  margin: 30px; 
+  font-size: 30px; 
+  padding: 15px; 
+  border: 1px solid #6f6e6e; 
+}
+
+.skillstext2 {
+  color: black;
+  margin: 30px; 
+  font-size: 30px; 
+  padding: 20px; 
+  border: 1px solid #6f6e6e; 
+
+}
+li {
+  list-style-type: square;  /* or 'circle', 'square' for different bullet types */
+}
+
+
+.skills {
+  display: flex;
+  background-color: rgb(18, 18, 18); 
+  color: aliceblue;
+  
+}
+
+.ulh {
+  color: aliceblue;
+  margin: 25px;
+  font-size: 25px;
+}
+
+
+@media (max-width: 1024px) {
+  .intro {
+    font-size: 40px; 
+    margin-bottom: 10px;
+
+  }
+  .skills {
+    font-size: 24px; 
+    display: flex;
+    background-color: rgb(18, 18, 18); 
+    color: aliceblue;
+    /* background-image:  url('../assets/simon.jpg'); */
+    flex-direction: column;
+  }
+
+  .ulh {
+    color: aliceblue;
+   font-size: 1rem;
+  
+  }
+
+  .skillstext {
+    font-size: 24px; 
+  }
+  .skillstext2 { font-size: 24px; 
+  }
+
+  .css {
+    display: inline-block;
+    height: 1.2em;  /* Match the height of the text */
+    width: auto;  
+    vertical-align: middle;
+    margin-right: 10px;  
+  }
+
+  .container {
+    flex-direction: column; 
+    height: auto; 
+    background-color: rgb(18, 18, 18); 
+   color: aliceblue;
+  }
+
+  .tro {
+    font-size: 24px; 
+    margin: 20px;
+    max-width: 100%; 
+    text-align:start; 
+    padding-bottom: 20px;
+  }
+
+  .contain .img1 {
+   height: auto;
+   width: 350px;
+   margin: 10px;
+  }
+}
+
+
+

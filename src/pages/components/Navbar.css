@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+  background-color: #000;
+}
+
+/* Navigation styles */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 570;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin-left: 30px;
+  padding-top: 50px;
+}
+
+nav ul li {
+  position: relative; /* Enables absolute positioning for dropdown */
+  display: block;
+  align-items: flex-end;
+}
+
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 95%; /* Slightly below "Projects" */
+  left: -30%;
+  border-radius: 4px;
+  border-color: white;
+  z-index: 100;
+  min-width: 200px; /* Consistent width */
+  min-height: 130px;
+  background-color: #000;
+  font-size: 1.2rem;
+}
+
+
+
+.dropdown-menu .dropdown-item {
+  color: white;
+  margin: 10px;
+  display: flex;
+  
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: white;
+  border-radius: 3px;
+  text-decoration: underline;
+ 
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Make visible on hover */
+}
+
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color:rgb(144, 148, 148);
+
+}
+
+
+/* Responsive navigation styles */
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  color: white;
+  opacity: 0;
+  font-size: 2rem;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+
+
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    margin: 20px;
+   
+ 
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%; /* Adjust height as needed */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Center content horizontally */
+    background-color: black;
+    transform: translateX(100%); /* Hidden by default */
+    z-index: 1000;
+    pointer-events: none; /* Disable interaction when hidden */
+    transition: transform 0.3s ease;
+    text-align: center; /* Center-align text */
+    color: white; /* Text color for contrast */
+    font-size: 1.6rem;
+  font-weight: 570;
+}
+
+header nav ul {
+  list-style: none;
+  margin-top: 60px; /* Remove if you want items at the very top */
+}
+
+header nav ul li {
+    padding: 5px 0; /* Adjust this for vertical spacing */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text */
+    line-height: 1; /* Reduce line height for tighter text spacing */
+    display: block; /* Ensure clickable area is consistent */
+    margin-bottom: 10px; 
+  }
+
+header .nav-btn {
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+  
+
+  header .responsive_nav {
+    transform: none;
+    pointer-events: auto;
+   
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Ensure content starts at the top */
+    gap: 15px;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 0rem; /* Move the button closer to the top */
+    right: 1rem; /* Keep the button aligned to the right */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 550;
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none; /* Visible for testing */
+  position:absolute; /* Fixed to ensure it spans the entire viewport */
+  top: -110%; /* Slightly below "Projects" */
+  left: -50%; /* Aligns to the very left edge of the screen */
+  width: 100%; /* Full viewport width */
+  border-radius: 0; /* Remove rounded corners for full-width look */
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color:transparent; /* Black background */
+  text-align: center; /* Center-align text */
+  transform: translateX(0);
+  font-size: 1.6rem;
+  font-weight: 570;
+ 
+}
+
+
+.dropdown-menu .dropdown-item {
+  color: white;
+  margin: 15px;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 570;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+
+.dropdown-menu .dropdown-item:hover {
+  color: white;
+  border-radius: 3px;
+  
+  background-color: transparent;
+  
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Make visible on hover */
+}
+
+
+}
