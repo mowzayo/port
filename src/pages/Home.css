@@ -1,7 +1,7 @@
 @keyframes colorTransition {
   0% { color: red; }
   25% { color: orange; }
-  50% { color: black; }
+  50% { color: white; }
   75% { color: green; }
   100% { color: blue; }
 }
@@ -10,8 +10,8 @@
 
 .intro {
   animation: colorTransition 5s infinite; /* 5s duration, infinite loop */
-  font-size: 80px;
-  margin: 35px;
+  font-size: 60px;
+  line-height: 1;
 }
 .intro2 {
   animation: colorTransition 5s infinite; /* 5s duration, infinite loop */
@@ -19,76 +19,147 @@
 }
 
 .container {
-   background-color: rgb(239, 243, 243); 
+   background-color: rgb(18, 18, 18); 
+   color: aliceblue;
    display: flex;
-  align-items: center; /* Vertically center text and image */
-  justify-content: space-between; /* Space between text and image */
-  padding: 20px;
-  height: 100vh; /* Full viewport height */
-  /*flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+   align-items: center; 
+   justify-content: space-between; 
+
 }
 
 .tro {
-  font-size: 30px;
+  font-size: 25px;
   margin: 35px;
-  max-width: 70%; /* Keep text from stretching too wide */
   padding-bottom: 130px;
+  max-width: 50%;
 }
 
-.img1 {
-  max-width: 40%; /* Set maximum width for responsiveness */
-  height: auto; /* Maintain aspect ratio */
-  margin-left: 10px; /* Add spacing between text and image */
-  padding-right: 50px;
-  
+.contain .img1 {
+  height: auto;
+  width: 600px;
+  margin-bottom: 100px;
+ 
 }
+
+.butto {
+  margin-top: 10px;
+  background-color: rgb(18, 18, 18); 
+  color: white;
+  width: 300px;
+  height: 60px;
+  border-radius: 2px;
+  border: 1px solid #6f6e6e; 
+  font-size: 2rem;
+  
+ }
+
+.butto:hover{
+  background-color: rgb(18, 18, 18);
+  transform: scale(1.05);
+  color: #666264;
+}
+
+h3 {
+  color: aliceblue;
+}
+.css {
+  display: inline-block;
+  height: 1.2em;  
+  width: auto;  
+  vertical-align: middle;
+  margin-right: 10px;  
+}
+
 
 .skillstext {
   color: black;
-  margin: 55px; /* This adds external space around the element */
-  font-size: 30px; /* Sets the font size */
-  padding: 20px; /* Adding padding to create space inside the background */
-  /*border: 1px solid #6f6e6e; /* Optional: adds a border to make the padding visible */
+  margin: 30px; 
+  font-size: 30px; 
+  padding: 15px; 
+  border: 1px solid #6f6e6e; 
 }
+
+.skillstext2 {
+  color: black;
+  margin: 30px; 
+  font-size: 30px; 
+  padding: 20px; 
+  border: 1px solid #6f6e6e; 
+
+}
+li {
+  list-style-type: square;  /* or 'circle', 'square' for different bullet types */
+}
+
 
 .skills {
   display: flex;
-  color: black;
-  background-color: rgb(239, 243, 243);
-  /* background-image:  url('../assets/simon.jpg');  */
+  background-color: rgb(18, 18, 18); 
+  color: aliceblue;
+  
 }
 
 .ulh {
-  color: black;
-  margin: 35px;
+  color: aliceblue;
+  margin: 25px;
+  font-size: 25px;
 }
 
-/* Responsive styles for smaller screens */
+
 @media (max-width: 1024px) {
   .intro {
-    font-size: 50px; /* Reduce font size */
-    margin: 20px;
+    font-size: 40px; 
+    margin-bottom: 10px;
 
+  }
+  .skills {
+    font-size: 24px; 
+    display: flex;
+    background-color: rgb(18, 18, 18); 
+    color: aliceblue;
+    /* background-image:  url('../assets/simon.jpg'); */
+    flex-direction: column;
+  }
+
+  .ulh {
+    color: aliceblue;
+   font-size: 1rem;
+  
+  }
+
+  .skillstext {
+    font-size: 24px; 
+  }
+  .skillstext2 { font-size: 24px; 
+  }
+
+  .css {
+    display: inline-block;
+    height: 1.2em;  /* Match the height of the text */
+    width: auto;  
+    vertical-align: middle;
+    margin-right: 10px;  
   }
 
   .container {
-    flex-direction: column; /* Stack text and image vertically */
-    height: auto; /* Allow height to adjust to content */
-    background-color: rgb(239, 243, 243);
+    flex-direction: column; 
+    height: auto; 
+    background-color: rgb(18, 18, 18); 
+   color: aliceblue;
   }
 
   .tro {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 24px; 
     margin: 20px;
-    max-width: 100%; /* Use full width */
-    text-align: center; /* Center align text */
+    max-width: 100%; 
+    text-align:start; 
     padding-bottom: 20px;
   }
 
-  .img1 {
-    max-width: 70%; /* Allow image to scale down */
-    margin: 0 auto; /* Center the image */
-    padding-right: 0; /* Remove padding for consistency */
+  .contain .img1 {
+   height: auto;
+   width: 350px;
+   margin: 10px;
   }
 }
 

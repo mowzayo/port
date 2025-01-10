@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Contact.css'; // Import the CSS file
 import add from '../assets/icons/maps-and-flags.png';
 import wats from '../assets/icons/whatsapp.png';
@@ -7,6 +8,8 @@ import fb from '../assets/icons/facebook.png';
 import git from '../assets/icons/github.png';
 import link from '../assets/icons/linkedin.png';
 import ig from '../assets/icons/instagram.png';
+import check from '../assets/icons/check.png';
+import cancel from '../assets/icons/cancel.png';
 
 
 function Contact() {
@@ -14,15 +17,53 @@ function Contact() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
+  const [statusType, setStatusType] = useState(''); 
+  const [isStatusVisible, setIsStatusVisible] = useState(false); 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ firstName, lastName, email, message });
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setMessage('');
-  };
+    
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      message
+    }
+
+    try {
+      const response = await axios.post('http://localhost:5000/contact', formData);
+
+        if (response.status === 201) {
+      setStatus('Thank you! for contacting me .');
+      setStatusType('success');
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setMessage('');
+      setIsStatusVisible(true); 
+    }
+  } catch (error) {
+    // Custom error handling
+    const errorMessage = error.response 
+      ? error.response.data.error || 'An unexpected error occurred.'
+      : 'Network error. Please try again later.';
+
+    setStatus(errorMessage);
+    setStatusType('error');
+    setIsStatusVisible(true);
+  }
+};
+
+useEffect(() => {
+  if (isStatusVisible) {
+    const timer = setTimeout(() => {
+      setIsStatusVisible(false); // Hide after 5 seconds
+    }, 15000);
+    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+  }
+}, [isStatusVisible]);
+
 
   return (
     <div className="contact-container">
@@ -43,7 +84,7 @@ function Contact() {
   <div className='contact-item'>
     <img className="img2" src={wats} alt="WhatsApp Icon" />
     <div className="contact-text">
-      <strong>Chat Me Up or call me!</strong>
+      <strong>Chat me up or call me!</strong>
       <p> +234 8080531219</p>
     </div>
   </div>
@@ -62,8 +103,7 @@ function Contact() {
 </div>
 
 
-
-      <form onSubmit={handleSubmit} className="contact-form">
+    <form onSubmit={handleSubmit} className="contact-form">
       <h1>I'm happy to connect with you! What do you have in mind?</h1>
         <div className="form-group">
           <label htmlFor="first-name">First Name</label>
@@ -106,6 +146,17 @@ function Contact() {
           ></textarea>
         </div>
         <button type="submit" className="submit-btn">Submit</button>
+         {/* Show status message here */}
+         {isStatusVisible  && (
+          <div className={`status-message ${statusType}`}>
+            <img 
+              src={statusType === 'success' ? check : cancel} 
+              alt={statusType}
+              className="status-icon"
+            />
+            <p>{status}</p>
+          </div>
+          )}
       </form>
     </div>
   );

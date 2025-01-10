@@ -2,13 +2,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(18, 18, 18); 
+    color: aliceblue;
   }
   
+  .head {
+  line-height: 1;
+  font-size: 2.5rem;
+  }
+
   .header {
     display: flex;
     justify-content: center;
-    font-size: 3.5rem;
+   font-size: 3.5rem;
+    margin: 25px;
     transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
@@ -25,14 +32,14 @@ body {
 }
 
 
-  .projects-container, .projects-container1 {
+  .projects-container, .projects-container1, .projects-container2, .projects-container3 {
     margin: 35px;
     display: flex;
- 
+    flex-wrap: wrap;
    }
    
 
-   .projects, .projects1 {
+   .projects, .projects1, .projects2, .projects3 {
      display: flex;
      gap: 5px;
      transition: transform 0.5s ease;
@@ -42,7 +49,7 @@ body {
    }
    
    .pro {
-    margin: 35px;
+    margin: 10px;
     font-size: 1.5rem;
    }
 
@@ -53,8 +60,9 @@ body {
     width: 150px;
     height: 60px;
     border-radius: 4px;
-    border: none;
+    border: 1px solid #6f6e6e; 
     font-size: 1.2rem;
+    display: inline-block; 
    }
 
 
@@ -91,7 +99,21 @@ body {
     transition: transform 0.5s ease;
     height: 600px;
     width: 50%;
-    background-image:  url('../assets/simon.jpg');  
+    background-image:  url('../assets/hospdb.png');  
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border: 5px solid brown;
+  }
+
+  .project3 {
+    display: flex;
+    gap: 20px;
+    border-color: black;
+    transition: transform 0.5s ease;
+    height: 600px;
+    width: 50%;
+    background-image:  url('../assets/restdb.png');  
     background-size: contain; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -102,18 +124,25 @@ body {
      width:800px;
      height: auto;
    }
+
+  
+  
    
    @media (max-width: 1063px) {
     /* General body styling adjustments */
-    body {
-      font-size: 14px; /* Adjust font size for smaller screens */
-    }
+ .head {
+  font-size: 2rem;
+ }
   
+
+
     /* Header styling adjustments */
     .header {
       font-size: 2.5rem; /* Reduce font size */
       flex-direction: column; /* Stack items vertically */
-      margin: 25px;
+      padding-left: 10px;
+      line-height: 1;
+
     }
   
     /* Hover effects for header */
@@ -126,7 +155,7 @@ body {
     }
   
     /* Projects container layout adjustments */
-.projects-container, .projects-container1 {
+.projects-container, .projects-container1, .projects-container2, .projects-container3 {
   margin: 15px;
   display:flex;
   flex-direction:column; /* Stack projects vertically */
@@ -134,7 +163,7 @@ body {
 }
 
 /* Projects layout adjustments */
-.projects, .projects1 {
+.projects, .projects1, .projects2, .projects3 {
   display: flex;
   flex-direction: column; /* Stack items vertically */
   gap: 1px;
@@ -142,7 +171,7 @@ body {
 }
 
 /* Individual project styling adjustments */
-.project, .project1, .project2 {
+.project, .project1, .project2, .project3 {
   width: 100%; /* Full width for smaller screens */
   margin-top: 0; /* Remove negative margin for better alignment */
   display: flex;
@@ -151,7 +180,7 @@ body {
 }
 
 /* Reverse the order of content in .projects-container1 */
-.projects-container1 {
+.projects-container1, .projects-container3 {
   flex-direction: column-reverse; /* Reverse the order (text below, image above) */
 }
 
@@ -164,14 +193,15 @@ body {
 
 /* Button styling adjustments */
 .butt {
-  width: 100%; /* Make button full width */
-  font-size: 1rem; /* Adjust font size */
+  width: 60%;
+  height: 50px;
+  font-size: 1rem;
   padding: 12px; /* Adjust padding */
   margin-top: 15px; /* Space above the button */
 }
 
     .pro {
-      font-size: 1.2rem; /* Adjust font size */
+      font-size: 1.1rem; /* Adjust font size */
 
     }
   }

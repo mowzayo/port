@@ -15,7 +15,8 @@ display: flex;
   right: 250px; /* Adjust to control vertical overlap */
   margin: 45px auto; /* Centers horizontally */
   padding: 20px;
-  background-color: #858a8d; /* Light gray background */
+  background-color: rgb(49, 48, 48); 
+  color: aliceblue;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center;
@@ -32,12 +33,13 @@ display: flex;
   display: flex;
   flex-direction: column;
   text-align: left;
+  color: aliceblue;
 }
 
 .form-group label {
   font-weight: bold;
   margin-bottom: 5px;
-  color: #070707; /* Darker text */
+  color: aliceblue; /* Darker text */
 }
 
 .form-group input,
@@ -74,14 +76,69 @@ display: flex;
 
 .contact {
   padding: 20px;
-  background-color: rgb(239, 243, 243);
+  background-color: rgb(18, 18, 18); 
+  color: aliceblue;
   width: 60%;
-  
+  font-size: 20px;
 }
+/* Status message container */
+.status-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999; /* Make sure it's on top of other content */
+  font-size: 36px;
+  max-width: 80%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Success message style */
+.status-message.success {
+  background-color: #97b798; /* Green background for success */
+}
+
+/* Error message style */
+.status-message.error {
+  background-color: #f56d63; /* Red background for error */
+}
+
+/* Status icon styling */
+.status-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Hide the message initially (you can use JS to remove this class after 5 seconds) */
+.status-message.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+
+/* Hide the message initially (you can use JS to remove this class after 5 seconds) */
+.status-message.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
 
 .contact h1 {
   font-size: 24px;
   margin-bottom: 20px;
+
 }
 
 .contact-item {
@@ -110,7 +167,7 @@ display: flex;
 }
 .contact-text strong {
   font-size: 16px;
-  color: #333; /* Adjust for visibility */
+  color: aliceblue; /* Adjust for visibility */
   margin-bottom: 5px;
 }
 
@@ -124,6 +181,7 @@ display: flex;
   .contact-container {
     flex-direction: column; /* Stacks items vertically */
     background-size: cover; /* Ensures background image scales well */
+    color: aliceblue;
   }
 
   .contact-form {
@@ -132,11 +190,13 @@ display: flex;
     right: 0; /* Resets positioning for smaller screens */
     padding: 15px; /* Smaller padding */
     box-shadow: none; /* Optional: removes shadow for simplicity */
+    color: aliceblue;
   }
 
   .contact {
     width: 100%; /* Full width for smaller screens */
     padding: 15px;
+    color: aliceblue;
   }
 
   .contact-item {
@@ -164,5 +224,23 @@ display: flex;
     padding: 10px; /* Adjusts padding */
     font-size: 14px; /* Smaller text */
   }
+
+  .status-message {
+    font-size: 18px;
+    padding: 8px 16px;
+    max-width: 90%; /* Increase max-width for mobile */
+  }
+
+  .status-message.success,
+  .status-message.error {
+    font-size: 16px; /* Adjust text size for smaller screens */
+  }
+
+  .status-message .status-icon {
+    width: 18px; /* Smaller icon on mobile */
+    height: 18px;
+    margin-right: 8px; /* Smaller margin */
+  }
+
 }
 
